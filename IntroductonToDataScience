@@ -1,0 +1,43 @@
+Data: 
+
+1.Data Engineering --> 80% --> Automated
+2.Data Analysis
+3.Data Science
+
+Data Scientist --> 15%
+
+1. Analytical Thinking
+    --> Pandas
+    --> Matplotlib
+    --> Numpy
+
+2. Statistics
+    --> Probability, Random Experiments
+    --> Data Statistics
+        --> Descriptive Statistics
+        --> Diagnositic Statistics
+        --> Predictive Statistics
+        --> Prescriptive Statistics
+    --> Project
+        ---> Pandas Profiling, Ydata Profiling
+        ---> DataPrep
+        ---> Dask
+
+3. Data Science
+    --> Structural Machine Learning
+        --> Linear Regression
+        --> Logistic Regression
+        --> Decision Trees and Random Forests
+    --> Neural Networks
+        --> Perceptron
+        --> Single Layer Neural Networks
+        --> Multi Layer Neural Networks
+        --> Deep Neural Networks
+    --> ML Strategies 
+    --> Computer Vision Algorithms
+    --> Large Language Models 
+ 
+    ---> PyTorch
+    ---> Tensorflow
+    ---> Scikit-Learn
+    ---> GPUs, TPUs.
