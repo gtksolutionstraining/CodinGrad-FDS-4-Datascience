@@ -1,0 +1,62 @@
+Advanced Analytics
+--> Types of Statistics
+    1. Descriptive Statistics
+    2. Diagnostic Statistics
+    3. Predictive Statistics
+    4. Prescriptive Statistics
+
+Data
+    1. Structural Data
+        1. RDBMS
+            --> CSV Data
+    2. Unstructured Data
+        1. Image Data
+        2. Video Data
+        3. Text Data
+    3. Semi Structured Data
+        1. CSV Data
+
+CSV Data --> CSV Files.
+
+Table --> Research
+    1. Rows     --> Tuple, Instances, Examples, Observations,     Experiments
+    2. Columns  --> Attribute, Feature, Field, Variable
+
+An instance is a function of variables
+
+Y = F(f1,f2,f3,.....fn) where f1,f2,f3,....fn are Realnumbers are Strings
+
+Weather Data
+       f1         f2            f3               f4
+Sno   Time     Oxygen%       Nitrogen%         Humidity      
+1      9         65            70                 90
+2      10        66            77                 85
+
+Employee Data
+Sno    EmployeeName    EmployeeID    Salary  Address 
+
+Y = F(f1,f2,f3,f4)
+
+Y1 = 9, 65,70,90
+Y2 = 10, 66, 77, 85
+
+--> An Example is a function of features
+--> A Table is a function of examples.
+
+Features/Variables/Fields/Attributes:
+
+    Range of f1 --> (0,100)
+
+y = x^2+x
+
+Forall x E R
+ForSome y E (0,1)
+
+Datatypes of features:
+    1. Integer Features
+    2. Floating Features
+    3. Object Features
+
+Types of Features:     --> Some properties
+1. Numerical Features
+2. Categorical Features
