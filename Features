@@ -1,0 +1,16 @@
+Features --> 
+    1. Data is a function of features.
+
+Types of Features based on basic data types:
+--> Based on the types of values of feature
+    1. Boolean Features
+    2. INT Features
+    3. Float Features
+    4. Object Features
+
+--> Feature --> 200 values --> 199 integeres, 1 floats
+--> Feature --> 200 values --> 199 integeres/floats, 1 object
+
+Types of Features based on properties:
+    1. Numerical Features
+    2. Categorical Features

@@ -43,6 +43,11 @@ Y2 = 10, 66, 77, 85
 --> An Example is a function of features
 --> A Table is a function of examples.
 
+table = f(f(f1,f2,f3,f4,...))
+table = f(f1,f2,f3,....)
+
+Every data is a function of features.
+
 Features/Variables/Fields/Attributes:
 
     Range of f1 --> (0,100)
@@ -52,10 +57,11 @@ y = x^2+x
 Forall x E R
 ForSome y E (0,1)
 
-Datatypes of features:
+Basic Datatypes of features:
     1. Integer Features
     2. Floating Features
     3. Object Features
+    4. Boolean Features
 
 Types of Features:     --> Some properties
 1. Numerical Features
