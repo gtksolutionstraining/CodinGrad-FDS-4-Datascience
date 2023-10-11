@@ -14,3 +14,42 @@ Types of Features based on basic data types:
 Types of Features based on properties:
     1. Numerical Features
     2. Categorical Features
+
+1. Numerical Features: Quantitative Feature
+    The values of the features should be continuous
+    f1 = 1,2,3,4,5,6,7,8,9,10 --> continuous --> f(x) = x where x belongs to N
+    f2 = 0,2,4,6,8,10,12,14,16,18,20 --> non continuous -->
+    f(x) = 2x where x belongs to N
+    f3 = 0,1,2,3,4,5,6,7,8,9 --> continuous
+    f(x) = x-1 where x belongs to N
+    f4 = 1,1,2,3,5,8,12,20,32,52 --> continous
+    f(x) = fibancci_function
+
+    Feature which has real numbers --> Numerical Feature.
+    Feature which has intergers Can be Numerical Features --> All integer features are not numerical.
+
+    Examples: Age, Temperature, Fare, HeartBeat 
+
+    1. Interval Scaled Numerical Features -->
+If the interval (subtraction) between any 2 values of the feature makes sense --> Whole feature can be treated as Numerical Feature.
+    2. Ratio Scaled Numerical Features -->
+If the ratio (division) between any 2 values of the feature make sense --> Whole feature is treated as Numerical Featrues.
+
+2. Categorical Features: Qualitative Feature
+    The values of the features should be discrete
+    f1 = 0,1,0,1,1,1,0,0,0,0,1 --> Discrete function
+    f2 = 3,4,3,3,5,2,2,5,5,2,3 --> range --> [2,5] -- 3
+                               --> range --> 2,3,4,5 --> limited set of values in defined range
+    f3 = 0,0,0,0,0.5,0.5,0.5,1,0,1,1,1,0
+        discrete values --> (0,0.5,1) --> distinct values
+    f4 = rating 
+        discrete values --> (1,2,3,4,5) -- 5
+                        --> (0.5,1,1.5,2,2.5,3,3.5,4,4.5,5)9
+
+    emp_id = 565152,402834,344589, --> Categorical Feature.
+
+    emp_id = ACC001,ACC002
+
+
+   emp_id =  478574823,348754329,3453489,4093034, --> categorical
+   cpu_clocks =  478574823,348754329,3453489,4093034 --> numerical
