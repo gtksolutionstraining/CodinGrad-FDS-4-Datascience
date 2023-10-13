@@ -1,5 +1,5 @@
 import pandas as pd
-def read_csv(data_path):
+def read_file(data_path):
     """Write comments
     """
     extension = data_path.split(".")[-1]

@@ -1,0 +1,54 @@
+Descriptive Statistics:
+    1. Summary Statistics
+    2. Graphical or Tabular Statistics
+
+1. Summary Statistics
+    1. Measure of Central Tendency
+    2. Dispersion
+    3. Skew and Kurtosis
+
+1. Measure of Central Tendency:
+    1. Mean / Average-> Numerical features
+    2. Median --> Numerical features
+    3. Mode --> Categorical features
+
+Examples: 
+    1. Bank Savings Accounts Value at the end of the financial year. --> Sum
+    2. What is the customer range in savings accounts.?
+        --> 10K maintain customers
+
+
+Salary: -1, 25,35,28,22,30,32,40,45,50,55,1000
+    1. What salary the company is giving to employee?
+        Average ==> 123
+        Median ==> 22,25,28,30,32,35,40,45,50,55,1000 ==> 35
+        Age ==> 0,100
+
+    2. What is female employee %?
+        (female_count/(male_count+female_count)) * 100
+    3. Mode
+        --> 1,2,3,4,4,4,5,5,5,5,1,1,1,1,1,2,3,4,5,6
+        --> More frequent number is 1
+Domain Expertise is required in statistics.
+
+
+Measure of Dispersion:
+    1. Range --> min and maximum
+    2. Quartiles
+    3. Inter Quartile Range
+    4. Standard Deviation/Variance
+        1. Distribution function --> PDFs
+        2. Normal Distribution
+
+f1(v) --> v 0,inf
+
+
+0,1,1,2,2,2,3,3,4
+
+--> Boxplot --> Q0(minimum), Q1, Q2, Q3, Q4(maximum)
+--> If the data is between Q0,and Q4 --> Inlier data
+--> If the data is outside of Q0 and Q4 --> Outlier data
+--> Q2 is called median
+--> Q3-Q1 --> Inter Quartile Range
+
+
