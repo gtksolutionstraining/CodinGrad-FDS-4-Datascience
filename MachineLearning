@@ -1,0 +1,121 @@
+1. Supervised Machine Learning
+    1. Trainer
+    2. Student will learn from Training
+    3. Given Training Data (X-Y), ML Model should find a function for mapping X-Y
+    Applications:
+        1. Spam Filtering
+        2. Speech Recognition
+        3. Machine Translation
+        4. Online Advertising -> 
+        5. Manufacturing Defects
+2. Unsupervised Machine Learning
+    1. No Trainer
+    2. Given Data X --> ML Model should understand patterns of the X
+    Applications:
+        1. Google News --> Clustering Similar News
+        2. Finding similar people
+            1. DNA Micro Array --> Clustering Algorithm
+3. Reinforcement Machine Learning
+    1. Audiance
+    2. ML Model will learn from feedbacks
+    3. Bounty and Penalty
+    Applications:   
+        1. Intelligent Robos
+
+
+1. Supervised ML:
+--> Involvs Training to build an ML Model.
+--> ML model --> Is a mathematical function
+--> Training Data
+--> House Price Prediction
+    1. House Size --x1
+    2. House Occupancy --x2
+    3. # Bathrooms --x3
+    4. Age of House
+    5. KMs distant from a school
+    6. KMs distant from a hospital
+    7. KMs distant from Public Travel Place
+    8. KMs distant from Working Place
+    9. Water Service
+    10. Locality
+
+--> Above 10 are called features to predict the house price.
+--> Label/Target Variable/Output Variable --> House Price
+
+
+Terminology:
+    1. Training Set --> Historic Data
+    2. x -- input variable/input feature/House Size
+    3. y -- output variable/output feature/label
+    4. m no of examples/observations
+        1. x1 --> y1
+        2. x2 --> y2
+        3. x3 --> y3
+        ......
+        m. xm --> ym
+    5. (x(i),y(i)) --> ith example --> x(i) ith input variable(ith house size) and y(i) is the respective house price
+
+    Training Data --> Learning Algorithm --> x --> f --> y_pred
+
+
+       loss = absolute(y_pred - y_actual)
+
+       y_pred = f(x)
+
+
+        xx --> Predict what can be the price for this
+y = mx + c
+
+c --> intercept --> when x = 0 for what value the line is intercepting at y is called intercept
+
+m --> direction + slope
+    1. sign of the m is -ve --> direction is downwards
+    2. sign of the m is +ve --> direction is upwards
+    3. value of the m will tell how much leaned the function is w.r.t y
+
+differntiations & partial differentiation & Limits
+
+f(x) = y_pred = Wx + b
+
+    1. W --> Weights
+    2. b --> bias
+
+Ways of finding best W, b for the function.
+1. Bruteforce
+    1. Give random values for W, b
+    2. Mean Absolute Error = (Sigma(0,m) abs(y_actual(i)-y_pred(i)))/m 
+        error = 0
+        for i in range(0,m):
+            error += abs(Y_actual[i]-Y_pred[i])
+        meanabsoluteError = error/m
+   *3. Mean Squarred Error = (Sigma(0,m) square(y_actual(i)-y_pred(i)))/m
+        error = 0
+        for i in rang(0,m):
+            error += (y_actual[i]-y_pred[i])**2
+        meansquaredError = error/m
+
+    J(W,b)/loss/cost_function = 1/2m * Sigma(0,m) (Y_actual[i]-Y_pred[i])^2
+    --> If you find the exact function or ideal function --> the error rate is 0
+
+
+1. You should be convinced function is ML model
+2. You should be convinced on y = mx + c ==> Linear Line
+3. what is x, what is y
+4. Historic Data --> We already have x,y
+5. We need find a pattern of y w.r.t x ==> Its NP Problem
+6. y = mx+c --> Proper m,c --> You need find this
+7. Brute force --> m,c/ W,b
+    1. How much the random ML model is wrong/right w.r.t actual data --> What is the cost/loss
+        1. Mean Absolute Error
+        2. Mean Squarred Error
+
+    MSE ~= 0
+    MSE == 0
+
+    2. J(W,b) = 1/2m * Sigma(0,m) (y_pred[i]-y_actual[i])**2
+
+J(w,b) = 1/2m * Sigma(0,m) (Wx[i] + b - y_actual[i]) ** 2
+
+J(W,b) --> Convex Function
+
+EVery Convex Function is differentiable and we can get global minima.

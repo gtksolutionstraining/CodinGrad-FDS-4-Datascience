@@ -9,8 +9,9 @@ Descriptive Statistics:
 
 1. Measure of Central Tendency:
     1. Mean / Average-> Numerical features
-    2. Median --> Numerical features
+    2. Median --> Numerical features --> Don't care outliers
     3. Mode --> Categorical features
+    4. Geomean --> Assumes some impact of outliers
 
 Examples: 
     1. Bank Savings Accounts Value at the end of the financial year. --> Sum
@@ -23,9 +24,11 @@ Salary: -1, 25,35,28,22,30,32,40,45,50,55,1000
         Average ==> 123
         Median ==> 22,25,28,30,32,35,40,45,50,55,1000 ==> 35
         Age ==> 0,100
+        Gmean ==> 11throot(22*25*28....*1000)
 
     2. What is female employee %?
         (female_count/(male_count+female_count)) * 100
+    
     3. Mode
         --> 1,2,3,4,4,4,5,5,5,5,1,1,1,1,1,2,3,4,5,6
         --> More frequent number is 1
@@ -33,12 +36,18 @@ Domain Expertise is required in statistics.
 
 
 Measure of Dispersion:
+
+How the data is distributed/dispersed/scattered around the central tendency.
+
     1. Range --> min and maximum
     2. Quartiles
     3. Inter Quartile Range
-    4. Standard Deviation/Variance
+    4. Standard Deviation sigma /Variance Sigma^2
+        Sqrt(x-x^)
         1. Distribution function --> PDFs
         2. Normal Distribution
+        3. Skewed Curves
+        4. Kurtosis Curves
 
 f1(v) --> v 0,inf
 
@@ -52,3 +61,12 @@ f1(v) --> v 0,inf
 --> Q3-Q1 --> Inter Quartile Range
 
 
+Correlations:
+    Pearson Correlation
+    Correlation of feature1, feature2 lies between ==> -1,1
+    -1 --> Features are negatively related
+    +1 --> Features are positively related
+    0 --> Features are unrelated.
+
+    Threshold -0.75 ,-1 ==> Negatively correlated
+    Threshold 0.75, 1 ==> Positively correlated
