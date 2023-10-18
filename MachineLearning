@@ -119,3 +119,24 @@ J(w,b) = 1/2m * Sigma(0,m) (Wx[i] + b - y_actual[i]) ** 2
 J(W,b) --> Convex Function
 
 EVery Convex Function is differentiable and we can get global minima.
+
+
+
+differentiation:
+y = f(x)
+    1. How much and how the Y is affected by a small change in x.
+    2. Lt (h->0) (f(x+h)-f(x))/h
+    3. The befaviours/characterestics of the function at x.
+    4. differentiation is slope of the function
+    5. The differentiation will guide you to go the global minima.
+
+partial differentiation:
+y = f(x1,x2,x3,x4,...xn)
+    1. When we have more than one variable as dependent variables.
+    2. Partial differentiation of y w.r.t x1 will tell u how much y is affecting by small change in x1
+    3. Partial differentiation of y w.r.t x1 will guide you in what direction you need go for x1 you will get global minima.
+
+
+slope ==  Gradient
+Gradient Descent Algorithm.
+
