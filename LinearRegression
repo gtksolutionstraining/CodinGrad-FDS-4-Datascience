@@ -1,0 +1,33 @@
+Linear Regression is a basic ML Model --> Linear Model --> Y = Wx + basic
+
+1. input variables = x
+2. output variable = y = y_actual
+3. no of examples pairs of (x,y) = m
+
+Linear Model = y_pred = f(x) = Wx + b 
+
+Loss Function = J(W,b) = 1/2*m (Sigma(0,m) (y_pred-y)**2)
+
+d(J(W,b))/dW = ?
+
+J(W,b) = 1/2*m (Sigma(0,m)((Wx+b) - y)**2)
+
+Find Gradients:(Loss)
+1.d(J(W,b))/dW = 1/2*m (Sigma(0,m) 2 * (Wx+b - y)* x)
+2.d(J(W,b))/dW = 1/m * Sigma(0,m) (y_pred-y)*x
+3.d(J(W,b))/db = 1/2*m (Sigma(0,m) 2 * (Wx+b -y) * 1)
+4.d(J(W,b))/db = 1/m * Sigma(0,m) (y_pred-y)
+
+Gradient Descent Algorithm:
+Repeat the 4 steps till you converge(W,b) are not changing
+1. Take Random values for W, b
+2. Calculate Loss --> printed
+3. Find Gradients
+3. W = W - alpha*(d(J(W,b)/dW))
+4. b = b - alpha*(d(J(W,b)/db))
+
+Export the model with latest W,b
+
+Linear Regression Model = y_pred = Wx+b
+
+Univariate Linear Regression

@@ -1,0 +1,31 @@
+input variables = x1,x2,x3,....xn
+output variable = y 
+
+Linear Regression Model = y_pred = w1*x1 + w2*x2 + ... + wn*xn + b
+
+Sequential Multipliation (no of clocks) = n of multiplication and n additions 
+
+W = np.array([w1,w2,w3,w4,....wn])
+W.shape ==> (n,1)
+X = np.array([x1,x2,x3,x4,....xn])
+X.shape ==> (n,1)
+
+y_pred = np.dot(W.T,X) + b
+
+Find Gradients:(Loss) ## Numpy Array Operations
+1.d(J(W,b))/dW = 1/2*m (Sigma(0,m) 2 * (np.dot(W.T,X) - y)* x)
+2.d(J(W,b))/dW = 1/m * Sigma(0,m) (y_pred-y)*x
+3.d(J(W,b))/db = 1/2*m (Sigma(0,m) 2 * (np.dot(W.T,X) -y) * 1)
+4.d(J(W,b))/db = 1/m * Sigma(0,m) (y_pred-y)
+
+Gradient Descent Algorithm:
+Repeat the 4 steps till you converge(W,b) are not changing
+1. Take Random values for W, b
+2. Calculate Loss --> printed
+3. Find Gradients
+3. W = W - alpha*(d(J(W,b)/dW)) ## Numpy array operation
+4. b = b - alpha*(d(J(W,b)/db)) ## Numpy array operation
+
+Linear Regression Model = y_pred = np.dot(W.T,X) + b ## Numpy Array Operation
+
+Multivariate Linear Regression Model.
