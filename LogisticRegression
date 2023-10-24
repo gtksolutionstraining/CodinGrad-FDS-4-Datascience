@@ -1,0 +1,81 @@
+Titanic Survival Prediction
+
+    no of examples = m
+    no of features = n 
+    label          = 1
+
+    Y_Pred = np.dot(W.T,X) + b
+
+    X = 2D Array with shape of (n*m)
+
+    Y_Pred = 2D Array with shape of (1*m)
+
+    1*m  = 1*m + 1*m
+    W.T shape = 1*n
+
+    W shape = n*1
+
+    b shape = 1*m
+
+
+Y_pred = np.dot(W.T,X) + b --> Linear Dimension --> Monotonicallty Increasing Function --> This will have probable infinite y values. 
+
+But our Y w.r.t our Titanic Survival Prediction context the values of Y are 0,1
+
+Z = Sigmoid(Y_pred) Z will be between (0,1)
+
+Sigmoid  f(x) = 1/1+e^-x
+
+Z = 1/1+e^-(Y_pred)
+
+Z = 1/1+e^-(np.dot(W.T,X+b))
+
+Actual Y 
+
+Loss/Cost = 1/2m * Sigma(0,m) (Y_actual - Z)**2 -- MSE Loss
+
+The above function is not a convex function
+
+If a function is convex function. and is differentiable then it has global minima.
+
+
+LogLoss = 1/m* -(Y_actual*log(Z)+(1-Y_actual)*log(1-Z)) -- Log Loss
+
+J(W,b) = -(Y_actual*log(Z)+(1-Y_actual)*log(1-Z))
+
+d(J(W,b))/dZ = -((Y_actual * 1/Z)+(1-Y_actual*(1/1-Z)*(-1)))
+             = (1-Y_actual/1-Z) - (Y_actual/Z)
+
+d(J(W,b))/dW = d(J(W,b))/dZ * dZ/dW ==> Chain Rule
+
+Z = (1/1+e^-Y_pred)
+
+d(Z)/dY_pred = -(1/(1+e^-Y_pred)**2) -(e^-Y_pred)
+             = 1/(1+e^-Y-pred)**2 * (e^-Y_pred)
+             = Z * (1-Z)
+
+
+d(J(W,b))/dW = d(J(W,b))/dZ * dZ/dY_pred * dY_pred/dW ==> Chain Rule
+d(J(W,b))/db = d(J(W,b))/dZ * dZ/dY_pred * dY_pred/db ==> Chain Rule
+
+((1-Y_actual/1-Z) -  (Y_actual/Z)) * (Z(1-Z))
+
+
+(Z(1-Y_actual) - (1-Z)*(Y_actual)/Z(1-Z)) * Z(1-Z)
+
+Z-Z*Y_actual -Y_actual +Z*Y_actual
+
+Z-Y_actual
+
+
+Y_pred = np.dot(W.T,X) + b
+
+dY_pred/dW = X
+
+dY_pred/db = 1
+
+W shape ==> (n,1)
+
+d(J(W,b))/dW = (Z-Y_actual) * X
+             =  ((1,m)-(1,m)) * (n,m)
+             = (1*m) * np.dot(X,(Z-Y_actual).T)

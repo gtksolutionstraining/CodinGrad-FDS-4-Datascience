@@ -49,7 +49,11 @@ If the ratio (division) between any 2 values of the feature make sense --> Whole
     emp_id = 565152,402834,344589, --> Categorical Feature.
 
     emp_id = ACC001,ACC002
-
+    Types of Categorical Features:
+        1. Binary Features/Boolean Features -- 2 distinct values 
+        2. Ordinal Features --> more than 2 but order matters
+        3. Nominal features --> gender --> male, female, others
+                                heir_color --> black, brown, think_brown
 
    emp_id =  478574823,348754329,3453489,4093034, --> categorical
    cpu_clocks =  478574823,348754329,3453489,4093034 --> numerical
