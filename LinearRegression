@@ -15,11 +15,12 @@ J(W,b) = 1/2*m (Sigma(0,m)((Wx+b) - y)**2)
 Find Gradients:(Loss)
 1.d(J(W,b))/dW = 1/2*m (Sigma(0,m) 2 * (Wx+b - y)* x)
 2.d(J(W,b))/dW = 1/m * Sigma(0,m) (y_pred-y)*x
+3.dW = 1/m * np.dot(X,(Y_pred-Y).T)
 3.d(J(W,b))/db = 1/2*m (Sigma(0,m) 2 * (Wx+b -y) * 1)
 4.d(J(W,b))/db = 1/m * Sigma(0,m) (y_pred-y)
 
 Gradient Descent Algorithm:
-Repeat the 4 steps till you converge(W,b) are not changing
+Repeat the 4 steps (2-4) till you converge(W,b) are not changing
 1. Take Random values for W, b
 2. Calculate Loss --> printed
 3. Find Gradients
