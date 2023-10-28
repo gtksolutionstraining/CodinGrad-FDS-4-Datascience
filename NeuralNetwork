@@ -1,0 +1,38 @@
+no of inputs = 3 --> X1, X2, X3
+
+no of neurons in hiddenlayer 1 = 5 --> Z11, Z12, Z13, Z14, Z15
+
+Z11 = W11*X1 + W12*X2 + W13*X3 +b1
+Z12 = W21*X1 + W22*X2 + W23*X3 +b2
+Z13 = W31*X1 + W32*X2 + W33*X3 +b3
+Z14 = W41*X1 + W42*X2 + W43*X3 +b4
+Z15 = W51*X1 + W52*X2 + W53*X3 +b5
+
+X shape = (n_x,m)
+Nodes1 = 5
+
+W1 Shape = (n_x,Nodes1)
+b1 Shape = (Nodes1,1)
+
+
+Z1 = np.dot(W1.T,X) + b1
+
+A1 = Sigmoid(Z1)
+
+
+Input shape = (Nodes1,m)
+Nodes2 = 1
+
+W2 Shape = (Nodes1,Nodes2)
+b2 Shape = (Nodes2,1)
+
+Z2 = np.dot(W2.T,A1) + b2
+
+A2 = Sigmoid(Z2)
+
+Y_pred = A2
+
+
+
+
+

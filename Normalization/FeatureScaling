@@ -2,4 +2,15 @@ Numbers  = [20,10,15,5,35,78,44,55,89,65] --> 0-100
 
 Numbers  = [0.2,0.1,0.15,0.05,0.35,0.78,0.44,0.55,0.89,0.65] --> (0,1)
 
-1. 
+1. 100% Stacked Normlization
+2. Mean Normalization
+    1. Numbers/Numbers.mean()
+    2. x(i) is an element in the data then 
+        x(i) = x(i)/mean(data)
+3. Z-Score Normalization
+    1. each element of the data x(i)
+        x(i) = (x(i)-mean(data))/standard_deviation(data)
+4. L2 Normalization
+    1. each element of the data x(i)
+        x(i) = x(i)/l2-norm(data)
+    2. l2_norm(data) = sqrt(sum((x1-mean)**2,(x2-mean)**2,....xn**2))
