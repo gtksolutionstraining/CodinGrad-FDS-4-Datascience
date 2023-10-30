@@ -1,0 +1,24 @@
+Training dataset of 15 features, with hidden layers of 4, 
+with each of 32,16,8,4 respectively and the output layer is 1
+
+input = (15,1)
+L1-Weights = (15,32) ==> 480
+L1-Bias = (32,1)     ==>  32
+                     ==> 512
+
+L2-Weights = (32,16) ==> 512
+L2-Bias = (16,1)     ==>  16
+                     ==> 528
+
+L3-Weights = (16,8)  ==> 128
+L3-Bias = (8,1)      ==>   8
+                     ==> 136
+
+L4-Weights = (8,4)   ==>  32
+L4-Bias = (4,1)      ==>   4
+                     ==>  36
+
+Output-Weights = (4,1)==>  4
+Output-Bias = (1,1)   ==>  1
+                      ==>  5
+Total Number of Params:  1217

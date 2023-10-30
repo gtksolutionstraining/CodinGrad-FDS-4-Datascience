@@ -35,4 +35,39 @@ Y_pred = A2
 
 
 
+H no of layers
 
+input layer == L0
+
+hiddenlayers = L1,L2,L3,....
+
+output layer = LH
+
+
+n no of features of the dataset
+m no of examples in the dataset
+L1 no of nodes/neurons in the layer 1
+L0 = (X1,X2,X2,X3,....Xn)
+
+L1-Z = (Z1,Z2,Z3,Z4,...ZL1)
+L1-A = (A1,A2,A3,A4,...AL1)
+
+L2-Z = (Z1,Z2,Z3,Z4,...ZL2)
+L2-A = (A1,A2,A3,A4,...AL2)
+
+
+
+LH-Z = (Z1,Z2)
+LH-A = (A1,A2)
+
+
+LH-Weights = (Nodes at Previous layer(H-1),Nodes at Current Layer)
+LH-Bias =    (Nodes at Current layer,1)
+
+LH-Z = (Nodes at Current Layer,1)
+LH-A = (Nodes at Current Layer,1)
+
+n = no of features
+m = no of examples
+
+input shape = (n,m) 
