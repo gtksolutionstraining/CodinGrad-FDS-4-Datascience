@@ -1,0 +1,22 @@
+input:  layer ith in the Neural Network
+        A(i-1)
+
+output: Ai, Zi, Wi, bi 
+
+        Zi = np.dot(Wi.T,A(i-1)) + bi
+        Ai = g(Zi)
+
+Derivations:
+
+        input = dAi -- from next layers
+
+        output = dZi, dA(i-1), dWi, dbi
+
+
+        dZi = np.multiply(dAi,g`(Zi))
+
+        dWi = 1/m* np.dot(A(i-1),dZi.T)
+        dbi = 1/m * np.sum(dZi,axis=1,keepdims=True)
+        
+        Update Weights and then 
+        dAi-1 = np.dot(Wi,dZi)

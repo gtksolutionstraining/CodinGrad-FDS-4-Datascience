@@ -1,0 +1,114 @@
+X = (3,m)
+#L1 = 5
+#Output = 1
+
+Forward Propagation:
+
+W1 = (3,5), b1 = (5,1), Z1 = (5,m), A1 = (5,m)
+
+1. Z1 = np.dot(W1.T,X) + b1 
+               (5,3)*(3,m)
+2. A1 = Sigmoid(Z1)
+
+W2 = (5,1), b1 = (1,1), Z2 = (1,m), A2 = (1,m)
+
+3. Z2 = np.dot(W2.T,A1) + b2
+               (1,5)*(5,m)
+4. A2 = Sigmoid(Z2)
+
+5. Y_pred = A2
+
+Compute_Loss:
+
+Loss = J(W1,W2,b1,b2) = -(Y*log(Y_pred)+(1-Y)*log(1-Y-pred)) == logloss
+
+Backward Propagation:
+ ** Computation Graph
+
+ dW2 = d`(J(W1,W2,b1,b2))/dW2
+ dW1 = d`(J(W1,W2,b1,b2))/dW1
+ db2 = d`(J(W1,W2,b1,b2))/db2
+ db1 = d`(J(W1,W2,b1,b2))/db1
+
+
+J(A2) = -(Y*log(A2)+(1-Y)*log(1-A2))
+
+d`J(A2)/dA2 = -(Y/A2 + (1-Y)*1/(1-A2)*(-1))
+            = -(Y/A2 - (1-Y)*1/(1-A2))
+            = (1-Y)/(1-A2) - Y/A2
+
+A2 = Sigmoid(Z2)
+
+f(x) = sigmoid(x)
+f`(x) = f(x)(1-f(x))
+
+d`A2/dZ2 = A2 * (1-A2)
+
+d`J(Z2)/dZ2 = d`J/dA2 * d`A2/dZ2
+            = ((1-Y)/(1-A2) - Y/A2) * (A2 * (1-A2))
+
+dZ2 = A2(1-Y) - Y(1-A2)
+    = A2 -A2Y -Y +A2Y
+    = A2-Y 
+
+d`Z2/dW2 = A1
+d`Z2/db2 = 1
+
+dW2 = d`(J(W1,W2,b1,b2))/dW2 = d`J/dZ2 * d`Z2/dW2
+    = (A2-Y) * A1
+(5,1) = (1,m) * (5,m)
+      np.dot(A1,(A2-Y).T)
+
+dW2 = 1/m * np.dot(A1,dZ2.T)
+db2 = d`(J(W1,W2,b1,b2))/db2 = d`J/dZ2 * d`Z2/db2
+db2 = 1/m * dZ2 * 1
+db2 = 1/m * dZ2
+(1,1) = 1/m * (1,m)
+
+    = 1/m * np.sum(dZ2,axis=1,keepdims=True)
+
+
+dA1 = d`J/dZ2 * d`Z2/dA1
+
+d`Z2/dA1 = W2
+
+dA1 =   dZ2 * W2
+(5,m) = (1,m) * (5,1)
+      = np.dot(W2,dZ2)
+
+dA1 = np.dot(W2,dZ2)
+
+dZ1 = d`J/dA1 * dA1/dZ1
+
+d`A1/dZ1 = derivation(Activation)
+
+dZ1 = np.dot(W2,dZ2) * derivation(Activation(Z1))
+(5,m) = (5,m) * (5,m)
+        ==> Element wise multiplication
+
+
+dZ1 = np.multiply(np.dot(W2,dZ2),derivation(Activation(Z1)))
+
+dW1 = d`J/dZ1 * d`Z1/dW1
+
+d`Z1/dW1 = X 
+dW1 = dZ1 * X
+(3,5) = (5,m) (3,m)
+
+dW1 = 1/m* np.dot(X,dZ1.T)
+
+db1 = d`J/dZ1 * d`Z1/db1
+db1 = dZ1
+(5,1) = (5,m)
+db1 = 1/m * np.sum(dZ1,axis=1,keepdims=True)
+
+
+dW1,dW2,db1,db2
+
+Update Parameters:
+    1. W1 = W1 - ((learning_rate) * (dW1))
+    2. W2 = W2 - ((learning_rate) * (dW2))
+    3. b1 = b1 - ((learning_rate) * (db1))
+    4. b2 = b2 - ((learning_rate) * (db2))
+
+INTEL ***

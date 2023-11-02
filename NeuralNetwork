@@ -33,8 +33,6 @@ A2 = Sigmoid(Z2)
 Y_pred = A2
 
 
-
-
 H no of layers
 
 input layer == L0

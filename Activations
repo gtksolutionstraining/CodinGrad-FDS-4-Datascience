@@ -1,0 +1,13 @@
+1. Sigmoid
+
+    Given x f(x) = 1/(1+e^-x)
+            f'(x) = f(x)(1-f(x))
+
+
+2. Tanh
+  
+    Given x f(x) = (e^x-e^-x)/(e^x+e^-x)
+            f'(x) = 1-f^2(x)
+
+3. ReLu
+4. Leaky ReLu

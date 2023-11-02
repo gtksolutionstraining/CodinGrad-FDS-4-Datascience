@@ -1,0 +1,33 @@
+You have an image with 1000*1000 
+
+there are m number of examples: 
+    each example is an image with 1000*1000
+
+n_x = (1000000)
+
+Neural Network --> 
+    1st layer --> (1M nodes)
+
+W1 = (1000000,1M)
+b1 = (1M,1)
+            ===> 1000B
+            ===> 1parameter takes 32bit 
+            ===> 1000B*4
+            ===> 1Million TB
+
+Convolutional Neural Networks --> CNN
+
+The building block of the CNNs is Convolution operation
+
+NVIDIA GPUs
+
+CUDA
+
+
+Transformers ==> ChatGPT, Bard
+
+
+
+
+
+
