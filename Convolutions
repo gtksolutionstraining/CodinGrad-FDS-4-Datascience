@@ -14,8 +14,9 @@ convolution operation will understand the image
     an edge detector
     extract important features in an image.
 
+Normal Convolution --> Valid Convolution
 
-Padded convolution:
+Padded convolution: --> Same Convolution
     input image == (6,6)
     filter = (3,3)
     p = 1
@@ -28,4 +29,26 @@ When you are building an ML model to predict something. That something is around
 
 
 Neural Style Transfer
+
+Strided Convolution
+        (n,n) * (f,f)       --> [(n+2p-f)/s + 1]
+                p = 0
+                s = 2
+
+        n = 6 f = 3 p = 1 s = 2
+        
+                (7+2-3)/2 + 1
+                4
+
+Pooling:
+
+        (n,n) 
+                filter size = (2,2)
+                stride = 2
+
+
+MaxPool/ Average Pool
+        (n,n) f=2, s= 2
+
+
 

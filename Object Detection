@@ -1,0 +1,49 @@
+Object Detection: Classifying and locating an object in an image.
+
+1.Sliding Window
+2.Region based algorithms
+    1. RCNN
+    2. Fast RCNN
+    3. Faster RCNN
+    4. Mask RCNN
+    5. YOLO
+        1. v1--v8
+
+YOLO: You Only Look Once.
+
+Input is an image. (32,32,3)
+YOLO Grid ==> (3,3)
+
+
+Output ==> (3,3,8)
+
+Applications:
+    1. Security Surviliance
+    2. Manufacturing Industries
+    3. Brain Tumor Detection
+
+
+Metric --> Intersection over Union
+
+Non Max Supression. --> Will supress the boxes that are predicted by the model and their Intersection over Union is less.
+
+Anchor Boxes: --> if the object's center points lies in the same gridcell then the number of objects should be in the label.
+
+    The number of objects is called Anchor Boxes.
+
+
+YOLO Alorithm: --> (19,19)
+    1. Anchor Box = 1
+    2. Grid Size = (3,3) 
+    3. Output Labels = P,bx,by,bw,bh,C1,C2,C3
+    4. input image size = (32,32,3)
+
+Step1: Feed the Image to model
+Step2: Model will give an output (3,3,8)
+Step3: Model predicted 9 boxes
+Step4: Non Max Supression Algorithm 
+    Step1: For each box if P<0.5 --> Supress all the box
+    Step2: Find IoU for each box and get the maximum box
+    Step3: Supress all non max boxes
+    Step4: Output only one box which has maximum IoU
+Step5: With given a box by NonMax Algorithm --> We Use OpenCV and draw a contour around the object.

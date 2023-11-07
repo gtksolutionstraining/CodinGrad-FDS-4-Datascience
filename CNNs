@@ -1,0 +1,60 @@
+Convolutions over volumes
+
+
+    (6,6,3) --> f = 3       --> (4,4,1)
+                f = (3,3,3)
+
+
+    
+    (6,6,3) --> f = 3          --> (4,4,3)
+                no_kernals = 3
+
+
+Example Convolution Neural Network
+
+(32,32,3) --> f=5,s=1,#k=6 --> (28,28,6) --> f=2,s=2,maxpool --> 
+
+(14,14,6) --> f=5,s=1,#k=6 --> (10,10,6) --> f=2,s=2,maxpool -->
+
+(5,5,6) --> (150,) --> L1 --> L2 --> L3 --> Outputlayer
+
+    1. Convolutional Layers
+    2. Pooling Layers
+    3. Fully Connected Layers [Neural Layers]
+
+
+Different Architectures proposed for CNNs:
+
+    1. LeNet
+    2. Alex Net
+    3. VGG-16
+    4. ResNet --> More robust in nature.
+    5. Inception -- Google Net
+    6. MobileNet
+    7. Efficient Net
+    8. NasNet
+
+1. Residual Block
+2. Point Convolution/1*1 Convolution
+
+1. Residual Block:
+    In ML Vanishing and Exploding Gradients.
+    1. Residual Block --> Skip the connections
+
+2. Point Convolution 
+
+                    n+2p-f+1
+    (28,28,192) --> (f=5,#k=32,p=2) -->  (28,28,32)
+
+        1. No of multiplications = (28*28*32) * (5*5*192) ==> 120Million
+
+
+    Use Point convolution:
+            n+2p-f+1 = 28
+            28+2p-1+1 = 28
+
+
+        (28,28,192) --> (f=1,#k=32) --> (28,28,32)
+
+        2. No of multiplications = (28*28*32)*(1*1*192) ==> 4.8Million
+
