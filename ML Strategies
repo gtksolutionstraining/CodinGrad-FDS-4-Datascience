@@ -1,0 +1,65 @@
+Life Cycle of Data Science & ML
+Data Split
+Bias & Variance
+Regularization
+Dropout
+Normalization
+Weight Initialization
+Optimization Algorithms
+    1. mini-batch
+    2. batch
+    3. stochastic
+
+Gradient Descent Algorithms
+    1. Momemntum
+    2. RMS Prop
+    3. Adam
+
+Learnig rate Decay
+Batch Normalization
+Model Evaluation Metrics
+    1. Accuracy
+    2. Loss
+    3. Precision
+    4. Recall
+    5. F1 Score
+Confusion Matrix
+
+
+Model Deployment/Inference:
+    Realtime Inference:
+
+    C++ to deploy the model.
+
+    Model:
+        1. Quantization --> 
+        2. XLA --> Accelerated Linear Algebra.
+            1. NVIDIA's CUDA
+            2. AMD's RoCm
+            3. FPGA's Architecture
+            4. Google TPUs
+        3. Model Convertion
+            1. ONNX
+
+Train/Validation(Dev)(hold_out)(cross validation)/Test
+
+100%
+
+Split Criteria: (Random Split)
+    1. Train ===> 80%
+    2. Validation ===> 15%
+    3. Test      ====> 5%
+
+
+We have to use Train and Validation splits for Training the model
+
+We will test the model using Test Dataset.
+
+Data Distribution:
+    1. we should mantain similar distribution for Validation and Test
+
+Split Criteria:
+    1. Domain Knowledge
+    2. Context Problem
+    3. Overall Data Distribution
+    4. Prepare validation and test set in such a way that the distribution of them should be most likely similar.
