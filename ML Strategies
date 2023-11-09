@@ -63,3 +63,101 @@ Split Criteria:
     2. Context Problem
     3. Overall Data Distribution
     4. Prepare validation and test set in such a way that the distribution of them should be most likely similar.
+
+
+Train/Validation/Test:
+
+Model Training:
+
+    1. We have Training Dataset
+    2. We will forward propagate with Trainining Dataset
+        1. Find the loss
+    3. We will find the loss of Validation Dataset
+    4. Backward Propagation
+    5. Repeat 2-4 until converge.
+
+Every Iteration:
+    1. Trainining Loss    - 1%        15%        15%
+    2. Validation Loss    - 11%       16%        30%
+                        - Variance  High Bias      Variance & Bias
+
+Bias: Error/Loss between the average model predictions and the groundtruth.
+
+Variance: Average variability in the model prediction for the given validation dataset.
+
+High Bias:
+    --> Underfitting
+    --> Overly Simplified Model
+    --> High bias/error in Training dataset and Validation Dataset 
+
+High Variance:
+    --> Overfitting
+    --> Overly Complexed Model
+    --> Low error on Training dataset and High error in Validation dataset
+
+Bias & Tradeoff.
+
+Solutions for Solving Bias:
+    1. Bigger Neural Network/CNN
+    2. Increasing the Training dataset
+    3. Train for Long time.
+    4. Come up with New Neural Network Architecture.
+
+Solutions for Solving Variance:
+    1. More Data in Training and Validation
+    2. Regularization
+    3. Come up with New Neural Network Architecture.
+
+
+Regularization:
+    1. Low Training Loss and High Validation Loss
+    2. Training is good but failing in exam.
+    3. Add some penalty to Training Loss
+
+J(W,b) = 1/m * Sigma(0,1)(Y_pred(i)-Y_actual(i))**2 + penalty
+
+        ==> Norma ==> A and B --> (A.B) 
+        ==> L2 Norm       ==> (x1,x2,x3,..) (y1,y2,y3,...) --> (x1-y1)**2 +
+    ==> L1-Regularization
+    ==> L2-Regularization
+
+penalty = (lambda/(2*m)) * (L2-Norm(W) + b**2)
+
+Dropout: It is a ml strategy which will also solve Variance Problem.
+
+    Dropping out neurons in the layer randomly while training only
+
+    1. Model Training
+    2. Training Dataset
+    3. Iteration 
+        for layer in layers:
+            random_neurons = random
+            turnoff those neurons
+        backward propagation
+    4. 3 step should be repeated
+
+Normalization:
+
+    Featureset X --> mean
+    Normalized X = X-Mean/standard deviation
+
+Vanishing & Exploding Gradients:
+    1. You have initialized low numbers as weights
+    2. Network is very very big
+    3. Then there can be a problem called Vanishing Gradients/Weights
+
+    4. You have initialized high numbers as weights
+    5. You large loss
+    6. there can be problem called Exploding Graidents/Weights
+
+Weight Initializing:
+    1. Random Weight Initialization
+    2. Random Weight Initialization * Initializing Multiplier
+
+    Initializing Multiplier 
+        1. Tanh --> sqrt(1/n[L-1])
+        2. relu --> sqrt(2/n[L-1])
+        3. Leaky relu
+        ==> sqrt(2/(n[l-1]+n[l]))
+
+
