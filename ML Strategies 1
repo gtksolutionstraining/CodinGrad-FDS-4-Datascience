@@ -1,0 +1,82 @@
+Optimization Algorithms
+
+Gradient Descent itself is an optimization algorithm.
+
+1. Batch Gradient Descent
+    --> The entire Training Dataset will be feeded to model in one epoch.
+    --> The weight update will be done after the epoch execution
+
+2. Mini Batch Gradient Descent
+    --> Whole Dataset Batch --> 128GB
+    --> Split the batch 
+    --> GPU --> GPU RAM (NVIDIA) -4GB
+    --> One batch can be of 4GB
+    --> 128/4 = 32 batches
+    --> BATCH_SIZE = 32
+    --> Will send one batch to forward and backward and weights will updated.
+    --> If you turnaround the whole dataset then its called an epoch
+    --> Data Pipelining
+
+3. Stochastic Gradient Descent
+    --> Update weights for each example.
+    --> Hard to converge.
+
+
+Weight Updating:
+
+    W = W - (alpha)*dW
+    b = b - (alpha)*db
+
+Updating to weights to minimize the loss.
+
+Weighted Averages
+1. Gradient Descent with Momentum:
+
+    VdW = beta(VdW) + (1-beta)(dW)
+    Vdb = beta(Vdb) + (1-beta)(db)
+    W = W - (alpha)*VdW
+    b = b - (alpha)*Vdb
+
+2. RMS Prop --> Root Mean Square
+
+    SdW = beta(SdW)+(1-beta)dW**2
+    Sdb = beta(Sdb)+(1-beta)db**2
+
+    W = W - (alpha)dW/sqrt(SdW)
+    b = b - (alpha)db/sqrt(Sdb)
+
+3. Adam --> Adaptive momemnt estimation
+    VdW = beta1(VdW) + (1-beta1)(dW)
+    Vdb = beta1(Vdb) + (1-beta1)(db)
+    SdW = beta2(SdW)+(1-beta2)dW**2
+    Sdb = beta2(Sdb)+(1-beta2)db**2
+
+    VdW^ = VdW/(1-beta1**2)
+    Vdb^ = Vdb/(1-beta1**2)
+
+    SdW^ = SdW/(1-beta2**2)
+    Sdb^ = Sdb/(1-beta2**2)
+
+    W = W - (alpha)(VdW^)/sqrt(SdW^)
+    b = b - (alpha)(Vdb^)/sqrt(Sdb^)
+
+Learning Rate Decay:
+Decreasing learning rate going forward
+
+Alpha_new = (1/1+epoch_num*decay_rate) * Alpha_old
+Alpha_new = (0.95**epoch_num) * Alpha_old --> Exponential Decay
+Alpha_new = (K/sqrt(epoch_num)) * Alpha_old
+
+Fine Tuning:
+
+-> Hyperparameter: alpha, beta2, beta1, lambda, dropout Probability, no of layers, no of neurons/layer, no of epochs.
+-> Very Tedious.
+
+Possible values of each parameter is 5
+Total no of experiments are 5**8 = 4lacks --> pick the best one.
+
+Keras_Tuner, GridSearch, etc.
+
+
+Covariate Shift Problem:
+--> Batch Normalization:

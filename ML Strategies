@@ -139,7 +139,7 @@ Dropout: It is a ml strategy which will also solve Variance Problem.
 Normalization:
 
     Featureset X --> mean
-    Normalized X = X-Mean/standard deviation
+    Normalized X = X-Mean(X)/standard deviation(X)
 
 Vanishing & Exploding Gradients:
     1. You have initialized low numbers as weights
